@@ -1,0 +1,388 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* header -pc */
+header {
+    position: relative;
+    z-index: 20;
+}
+
+.header {
+    width: 100%;
+    height: 85px;
+    background-image: url("//contents-image.twayair.com/homepage/images/common/bg_header.png");
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    border-bottom: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    /* GNB */
+    /* 해더 개인메뉴 */
+}
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+}
+
+.header .header_inner {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.header .header_inner:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.header .header_inner > a {
+    float: left;
+}
+
+.header .header_inner .top_logo {
+    margin-top: 23px;
+    width: 101px;
+    height: 43px;
+}
+
+.header .header_inner .logo_favor {
+    margin-top: 14px;
+    display: inline-block;
+}
+
+.header .header_inner .logo_favor img {
+    height: 30px;
+}
+
+.header .header_inner .logo_favor:before {
+    display: inline-block;
+    content: "";
+    width: 14px;
+    height: 14px;
+    margin: 0 10px;
+    vertical-align: middle;
+    background: url("//contents-image.twayair.com/homepage/images/ico/ico_x.png") no-repeat -4px -4px;
+}
+
+.header .gnb {
+    float: left;
+    margin-left: 60px;
+    width: 820px;
+    box-sizing: border-box;
+    z-index: 10;
+    line-height: 1;
+}
+
+.header .gnb > ul {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .gnb > ul > li {
+    height: 85px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.header .gnb > ul > li .dep1 {
+    display: table;
+    margin: 5px auto 0 auto;
+    height: 80px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.header .gnb > ul > li .dep1 span {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1.2;
+}
+
+.header .gnb > ul > li .dep1 :after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: #d22c26;
+}
+
+.header .gnb > ul > li .dep1:hover :after {
+    width: 100%;
+    margin-left: -50%;
+    transition: all 300ms;
+}
+
+.header .gnb .dep2 {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    padding-top: 40px;
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+    z-index: 60;
+}
+
+.header .gnb .dep2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1200px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.header .gnb .dep2 ul li {
+    position: relative;
+    padding: 0px 20px 0px 30px;
+    width: 33%;
+    vertical-align: top;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+.header .gnb .dep2 ul li:first-child, .header .gnb .dep2 ul li:nth-child(3n+1) {
+    padding-left: 0;
+}
+
+.header .gnb .dep2 ul li:nth-child(n+4) {
+    padding-top: 30px;
+}
+
+.header .gnb .dep2 ul li:nth-child(3n) {
+    border-right: 0;
+}
+
+.header .gnb .dep2 ul li a {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.header .gnb .dep2 ul li strong {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 17px;
+    color: #1a1a1a;
+    font-weight: 800;
+}
+
+.header .gnb .dep2 ul li span {
+    font-size: 14px;
+    color: #4d4d4d;
+    font-weight: 500;
+}
+
+.header .util_wrap {
+    float: right;
+    padding-top: 16px;
+}
+
+.header .util_wrap .sel_lang_wrap {
+    position: relative;
+}
+
+.header .util_wrap .sel_lang_wrap:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.header .util_wrap .sel_lang_wrap > ul > li {
+    float: left;
+    position: relative;
+}
+
+.header .util_wrap .sel_lang_wrap > ul > li:first-child:after {
+    display: inline-block;
+    content: "";
+    position: relative;
+    top: 2px;
+    margin: 0 20px 0 15px;
+    width: 1px;
+    height: 12px;
+    background-color: #7f7f7f;
+}
+
+.header .util_wrap .sel_lang_wrap > ul > li a {
+    display: inline-block;
+    padding-right: 14px;
+    font-size: 14px;
+    color: #4d4d4d;
+    background: url("//contents-image.twayair.com/homepage/images/common/arr_txt_sel.png") no-repeat 99.9% 50%;
+}
+
+.header .util_wrap .sel_lang_wrap.ta {
+    position: relative;
+}
+
+.header .util_wrap .sel_lang_wrap.ta:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.header .util_wrap .sel_lang_wrap.ta > ul > li {
+    float: left;
+    position: relative;
+}
+
+.header .util_wrap .sel_lang_wrap.ta > ul > li:first-child:after {
+    display: inline-block;
+    content: "";
+    position: relative;
+    top: 0;
+    margin: 0px;
+    width: 0;
+    height: 0;
+    background-color: #fff;
+}
+
+.header .util_wrap .sel_lang_wrap.ta > ul > li a {
+    display: inline-block;
+    padding-right: 14px;
+    font-size: 14px;
+    color: #4d4d4d;
+    background: url("//contents-image.twayair.com/homepage/images/common/arr_txt_ta.png") no-repeat 100% 50%;
+}
+
+.header .util_wrap .util_menu {
+    float: right;
+    position: relative;
+    margin-top: 10px;
+}
+
+.header .util_wrap .util_menu a {
+    display: inline-block;
+    margin-right: 26px;
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: -9999px;
+}
+
+.header .util_wrap .util_menu a:last-child {
+    margin-right: 0;
+}
+
+.header .util_wrap .util_menu .btn_login {
+    width: 30px;
+    height: 30px;
+    background: url("//contents-image.twayair.com/homepage/images/ico/ico_top_login.png") no-repeat 100% 0;
+}
+
+.header .util_wrap .util_menu .btn_login.on {
+    background: url("//contents-image.twayair.com/homepage/images/ico/ico_top_login_on.png") no-repeat 100% 0;
+}
+
+.header .util_wrap .util_menu .btn_search {
+    background-image: url("//contents-image.twayair.com/homepage/images/ico/ico_top_search.png");
+}
+
+.header .util_wrap .util_menu .btn_allmenu {
+    margin-right: 0;
+    background-image: url("//contents-image.twayair.com/homepage/images/ico/ico_top_allmenu.png");
+}
+
+/* header - mobile */
+@media screen and (max-width: 960px) {
+  header {
+    height: 55px;
+  }
+  header .header {
+    height: 55px;
+    border-bottom: none;
+}
+  header .header .page-tit {
+      display: block;
+      margin: 0px 100px;
+      height: 55px;
+      line-height: 55px;
+      font-size: 20px;
+      font-weight: bold;
+      color: rgb(26, 26, 26);
+      text-align: center;
+  }
+  header .header_inner {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      height: 55px;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgb(209, 209, 209);
+      background-image: url("//contents-image.twayair.com/payment/images/common/bg_header.png");
+      background-position: 100% 0px;
+      background-repeat: no-repeat;
+      background-color: rgb(255, 255, 255);
+      z-index: 100;
+  }
+  header .header_inner .btn_back, header .header_inner .btn_home, header .header_inner .btn_category, header .header_inner .btn_gnb {
+      display: block;
+  }
+  header .top_logo {
+      display: none;
+  }
+  header .btn_back {
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      background: url("//contents-image.twayair.com/payment/images/common/ico_back_history.png") 50% 50%/auto 20px no-repeat;
+  }
+  header .btn_home {
+      position: absolute;
+      top: 8px;
+      left: 53px;
+      width: 40px;
+      height: 40px;
+      background: url("//contents-image.twayair.com/payment/images/common/ico_home.png") 50% 50%/22px auto no-repeat;
+  }
+}
